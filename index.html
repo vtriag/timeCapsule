@@ -4,11 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Fashion Club</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <!-- Cabeçalho de The Fashion Club -->
+      <div class="container">
+        <img src="images/logo.svg" alt="Logo The Fashion Club" class="logo" />
+        <i
+          class="fas fa-bars menu-icon"
+          onclick="toggleMenu()"
+          title="Menu"
+        ></i>
+        <ul class="nav-mobile">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#moda">Moda do Século XXI</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#mensagem">Mensagem</a></li>
+        </ul>
+
+        <!-- Menu desktop -->
+        <nav class="nav-desktop">
+          <a href="#inicio">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#moda">Moda do Século XXI</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#mensagem">Mensagem</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -16,7 +43,7 @@
         <!-- Sala 1 -->
       </section>
 
-      <section class="Sobre">
+      <section id="sobre" class="Sobre">
         <!-- Sala 2 -->
         <div class="oneBox">
           <span>A MODA</span>
@@ -43,7 +70,7 @@
         <!-- Sala 3 -->
       </section>
 
-      <section class="content-carrosel">
+      <section id="galeria" class="content-carrosel">
         <div class="content">
           <!-- Inputs para controle -->
           <input type="radio" name="slide" id="slide1" checked />
@@ -56,31 +83,22 @@
           <!-- Slides -->
           <div class="slides">
             <div class="slide s1">
-              <img
-                src="./img/1.svg"
-                alt="vestido vermelho"
-              />
+              <img src="./images/1.svg" alt="vestido vermelho" />
             </div>
             <div class="slide">
-              <img
-                src="./img/2.svg"
-                alt="vestido elegante preto"
-              />
+              <img src="./images/2.svg" alt="vestido elegante preto" />
             </div>
             <div class="slide">
-              <img src="./img/3.svg" alt="vestido renda preto" />
+              <img src="./images/3.svg" alt="vestido renda preto" />
             </div>
             <div class="slide">
-              <img src="./img/4.svg" alt="colete bege" />
+              <img src="./images/4.svg" alt="colete bege" />
             </div>
             <div class="slide">
-              <img
-                src="./img/5.svg"
-                alt="vestido-OldMoney"
-              />
+              <img src="./images/5.svg" alt="vestido-OldMoney" />
             </div>
             <div class="slide">
-              <img src="./img/6.svg" alt="Vestido Curto Preto" />
+              <img src="./images/6.svg" alt="Vestido Curto Preto" />
             </div>
           </div>
 
@@ -104,5 +122,11 @@
     <footer>
       <!-- Rodapé do site -->
     </footer>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-mobile").classList.toggle("open");
+      }
+    </script>
   </body>
 </html>

@@ -1,53 +1,250 @@
 /* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Sobre{
-    display: flex;
-    background-color: #111;
-    justify-content: space-between;
-    padding: 60px 5vw;
-    gap: 40px;
-    flex-wrap: wrap;
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-size: 12px;
+  font-family: "Playfair Display", sans-serif;
 }
-/* parte esquerda do sobre */
-.oneBox{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1 1 300px;
+
+header {
+  background: #f3ece4;
+  width: 100%;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 1000;
 }
-.oneBox span{
-    color: #fff;
-    background-color: #A6141D;
-    font-size: 2rem;
+
+.container {
+  background-color: #f3ece4;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Ícone do menu (hambúrguer) */
+.menu-icon {
+  padding: 20px;
+  background: #A6141D;
+  border-radius: 3px;
+  color: #f3ece4;
+  font-size: 20px;
+  display: none;
+  transition: .25s;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+  background: #801017;
+}
+
+
+/* Menu mobile/tablet */
+.nav-mobile {
+  list-style: none;
+  font-size: "Playfair Display", serif;
+  padding: 0;
+  background: #fff;
+  max-height: 0;
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  visibility: hidden;
+  border-radius: 0;
+  opacity: 0;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.nav-mobile.open {
+  max-height: 500px;
+  visibility: visible;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.nav-mobile li a {
+  padding: 12px 0;
+  display: block;
+  transition: .25s;
+  color: #A6141D;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-mobile li a:hover {
+  background: #ffffff;
+}
+
+/* Menu desktop */
+.nav-desktop {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-desktop a {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  color: #A6141D;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-desktop a:hover {
+  color: #801017;
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-icon {
     display: block;
-    padding: 5px 10px;
-    width: fit-content;
-    font-family: 'Playfair Display SC';
-    
+  }
+
+  .nav-mobile {
+    display: block;
+  }
 }
+
+@keyframes bounce {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+
+
+
+/* Seção 1 */
+.hero-red {
+  background-color: #A6141D;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-red-text {
+  padding: 40px;
+  max-width: 600px;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  transform: rotate(-3deg);
+  z-index: 2;
+  position: relative;
+}
+
+.hero-red-text h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.hero-red-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 95vh;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-red-text {
+    transform: none;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-red-img {
+    max-height: 50vh;
+    opacity: 0.3;
+  }
+}
+
+/* Seção 2 */
+.Sobre {
+  display: flex;
+  background-color: #111;
+  justify-content: space-between;
+  padding: 60px 5vw;
+  gap: 40px;
+  flex-wrap: wrap;
+
+}
+
+/* parte esquerda do sobre */
+.oneBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 300px;
+}
+
+.oneBox span {
+  color: #fff;
+  background-color: #A6141D;
+  font-size: 2rem;
+  display: block;
+  padding: 5px 10px;
+  width: fit-content;
+  font-family: 'Playfair Display SC';
+
+}
+
 /* parte direita do sobre */
-.twoBox{
-    font-family: 'Playfair Display';
-    flex: 1 1 300px;
-    font-family: 'Georgia', serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 600px;
-    color: #E8E3DD;
+.twoBox {
+  font-family: 'Playfair Display';
+  flex: 1 1 300px;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  color: #E8E3DD;
 
 }
 
 /* Background geral da section */
 .content-carrosel {
-  background-color: #111; 
+  background-color: #111;
   padding: 50px 0;
   display: flex;
   justify-content: center;
@@ -61,13 +258,15 @@
   width: 935px;
   overflow: hidden;
   position: relative;
-  background-color: #E8E3DD; /* cor do carrossel em si */
+  background-color: #E8E3DD;
+  /* cor do carrossel em si */
   margin: 20px;
 }
 
 .slides {
   display: flex;
-  width: 600%; /* 6 slides */
+  width: 600%;
+  /* 6 slides */
   height: 100%;
   transition: margin-left 0.6s ease;
 }
@@ -79,8 +278,9 @@
 .slide img {
   width: 100%;
   height: 100%;
- 
+
 }
+
 /* posição do navigation */
 .navigation {
   position: absolute;
@@ -88,9 +288,10 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  
-  
+
+
 }
+
 /* estilização da nav */
 .bar {
   width: 70px;
@@ -100,8 +301,9 @@
   border-radius: 0;
   cursor: pointer;
   transition: .6s;
-  
+
 }
+
 /* efeito hover da nav */
 .bar:hover {
   background-color: #A6141D;
@@ -112,24 +314,30 @@ input {
 }
 
 /* Controle dos slides */
-#slide1:checked ~ .slides {
+#slide1:checked~.slides {
   margin-left: 0;
 }
-#slide2:checked ~ .slides {
+
+#slide2:checked~.slides {
   margin-left: -100%;
 }
-#slide3:checked ~ .slides {
+
+#slide3:checked~.slides {
   margin-left: -200%;
 }
-#slide4:checked ~ .slides {
+
+#slide4:checked~.slides {
   margin-left: -300%;
 }
-#slide5:checked ~ .slides {
+
+#slide5:checked~.slides {
   margin-left: -400%;
 }
-#slide6:checked ~ .slides {
-  margin-left: -500%;    
+
+#slide6:checked~.slides {
+  margin-left: -500%;
 }
+
 /* responsividade */
 @media (max-width: 600px) {
   .content {
