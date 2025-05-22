@@ -59,7 +59,6 @@
 .content {
   height: 520px;
   width: 935px;
-  border-radius: 20px;
   overflow: hidden;
   position: relative;
   background-color: #E8E3DD; /* cor do carrossel em si */
@@ -75,7 +74,6 @@
 
 .slide {
   width: 100%;
-
 }
 
 .slide img {
@@ -99,7 +97,7 @@
   height: 17px;
   border: 2px solid #fff;
   margin: 6px;
-  border-radius: 5px;
+  border-radius: 0;
   cursor: pointer;
   transition: .6s;
   
