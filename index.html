@@ -39,12 +39,27 @@
     </header>
 
     <main>
-      <section>
-        <!-- Sala 1 -->
+      <section class="hero" id="inicio">
+        <div class="bg-text">
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+          <p>THE FASHION CLUB THE FASHION CLUB THE FASHION CLUB</p>
+        </div>
+        <div class="modelo">
+          <img class="modelo" src="images/model.svg" alt="Modelo Fashion Club" />
+        </div>
       </section>
 
       <section id="sobre" class="Sobre">
-        <!-- Sala 2 -->
         <div class="oneBox">
           <span>A MODA</span>
           <span>COMO VOCÊ</span>
@@ -66,8 +81,55 @@
         </div>
       </section>
 
-      <section>
-        <!-- Sala 3 -->
+      <section id="moda" class="section-moda" aria-label="Temas de Moda">
+        <div class="moda-section">
+          <div class="card">
+            <h3>Minimalismo Moderno</h3>
+            <p>
+              Linhas retas, paleta neutra e silhuetas limpas. O luxo da
+              simplicidade.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Old Money</h3>
+            <p>
+              A estética da riqueza silenciosa: alfaiataria impecável, tecidos
+              nobres e tons sóbrios.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Goth Chic</h3>
+            <p>
+              Elegância sombria com preto, couro, renda e um toque de mistério.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Glamour Y2K</h3>
+            <p>
+              Brilho, transparência e cintura baixa. O retorno ousado dos anos
+              2000.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Moda Sustentável</h3>
+            <p>
+              Tecidos ecológicos, processos conscientes e design atemporal.
+              Estilo com propósito.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Techno Futurista</h3>
+            <p>
+              Tecidos metálicos, cortes geométricos e elementos high-tech. O
+              amanhã da moda começa agora.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="galeria" class="content-carrosel">
@@ -114,14 +176,38 @@
         </div>
       </section>
 
-      <aside>
-        <!-- Sala 5 (conteúdo adicional/lateral) -->
+      <aside id="mensagem" class="mensagem">
+        <div class="oneBox2">
+          <span>DEIXE A</span>
+          <span>SUA MENSAGEM</span>
+        </div>
+        </div>
+
+        <form class="mensagem-form">
+          <label for="nome" style="display: block">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+            style="display: block; width: 100%; margin-bottom: 1rem"
+          />
+
+          <label for="texto" style="display: block">Mensagem:</label>
+          <textarea
+            id="texto"
+            name="mensagem"
+            required
+            style="display: block; width: 100%"
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
       </aside>
     </main>
 
-    <footer>
-      <!-- Rodapé do site -->
-    </footer>
+    <footer class="footer">© Equipe 4 | Atlântico Avanti | FSM1</footer>
 
     <script>
       function toggleMenu() {
